@@ -1,0 +1,78 @@
+<!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+  <mat-toolbar style="position: relative" color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Elementary</h1>
+    <div style="position: absolute; right: 0">
+      <mat-icon>exit_to_app</mat-icon>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav style="overflow: hidden"  #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+
+      <mat-nav-list>
+        <app-leftsidenav></app-leftsidenav>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color: aqua;height: 100%;width: 100%;overflow: hidden">
+
+      <div>
+          <app-answerarea></app-answerarea>
+      </div>
+
+      <div>
+        
+        <app-imageclue></app-imageclue>
+      </div>
+
+
+
+
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
+  
+</div> -->
+<!-- Image and text -->
+<nav class="navbar navbar-dark primary-color sticky-top">
+    <div class="navbar-brand">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button> 
+      Elementary
+    </div>
+    </nav>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav style="overflow: hidden"  #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    
+          <mat-nav-list>
+            <app-leftsidenav></app-leftsidenav>
+          </mat-nav-list>
+        </mat-sidenav>
+    
+        <mat-sidenav-content style="background-color: aqua;height: 100%;width: 100%;overflow: hidden">
+    
+          <div>
+              <app-answerarea></app-answerarea>
+          </div>
+    
+          <div>
+            
+            <app-imageclue></app-imageclue>
+          </div>
+    
+    
+    
+    
+        </mat-sidenav-content>
+        
+      </mat-sidenav-container>
+
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->

@@ -1,0 +1,23 @@
+<div class="container-fluid" >
+   
+<mat-card class="example-card">
+    <mat-card-header>
+      <div  mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Sarbajit Biswas</mat-card-title>
+      <mat-card-subtitle>Elite</mat-card-subtitle>
+    </mat-card-header>
+
+  </mat-card>
+  <mat-list  >
+      <h3 mat-subheader>Levels</h3>
+      <div style="background-color: rgba(127, 255, 210, 0.459);overflow-y: scroll;height: 400px">
+      <mat-list-item *ngFor="let folder of folders">
+        <mat-icon mat-list-icon>lock_open</mat-icon>
+        
+        <p mat-line> {{folder.name}} </p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </div>
+      
+    </mat-list>
+  </div>
