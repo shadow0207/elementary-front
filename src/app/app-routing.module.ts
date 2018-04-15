@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import{LandingComponent} from './app/landing/landing.component';
 import{DashboardComponent} from './app/dashboard/dashboard.component';
 const routes: Routes = [
-  {path:'', component: LandingComponent},
-  {path:'dashboard',component:DashboardComponent}
+ // {path:'', component: LandingComponent},
+  {path:'',component:DashboardComponent}
 ];
 @NgModule({
   imports: [

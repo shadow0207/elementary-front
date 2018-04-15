@@ -10,8 +10,8 @@
   </mat-card>
   <mat-list  >
       <h3 mat-subheader>Levels</h3>
-      <div style="background-color: rgba(127, 255, 210, 0.459);overflow-y: scroll;height: 400px">
-      <mat-list-item *ngFor="let folder of folders">
+      <div style="background-color: rgba(127, 255, 210, 0.459);overflow-y: scroll;height: 100vh">
+      <mat-list-item  [style.background-color]="selected===folder.name ? 'grey' : ''" *ngFor="let folder of folders"  (click)="setTitle(folder.name)">
         <mat-icon mat-list-icon>lock_open</mat-icon>
         
         <p mat-line> {{folder.name}} </p>

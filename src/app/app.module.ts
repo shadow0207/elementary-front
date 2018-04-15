@@ -8,6 +8,7 @@ import { LandingComponent } from './app/landing/landing.component';
 import { DashboardComponent } from './app/dashboard/dashboard.component';
 import { ImageclueComponent } from './app/imageclue/imageclue.component';
 import {CdkTableModule} from '@angular/cdk/table';
+import{ToasterServiceService} from './app/toaster-service.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   MatAutocompleteModule,
@@ -46,6 +47,8 @@ import {
 import { LeftsidenavComponent } from './app/leftsidenav/leftsidenav.component';
 import { SearchareaComponent } from './app/searcharea/searcharea.component';
 import { AnswerareaComponent } from './app/answerarea/answerarea.component';
+import { HistorydialogcompComponent } from './app/historydialogcomp/historydialogcomp.component';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +58,9 @@ import { AnswerareaComponent } from './app/answerarea/answerarea.component';
     ImageclueComponent,
     LeftsidenavComponent,
     SearchareaComponent,
-    AnswerareaComponent
+    AnswerareaComponent,
+    HistorydialogcompComponent,
+    
   ],
   imports: [ CdkTableModule,
     MatAutocompleteModule,
@@ -99,7 +104,8 @@ import { AnswerareaComponent } from './app/answerarea/answerarea.component';
     AppRoutingModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [ToasterServiceService],
+  entryComponents:[HistorydialogcompComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

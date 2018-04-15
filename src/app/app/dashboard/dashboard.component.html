@@ -38,38 +38,39 @@
 </div> -->
 <!-- Image and text -->
 <nav class="navbar navbar-dark primary-color sticky-top">
-    <div class="navbar-brand">
-        <button mat-icon-button (click)="snav.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button> 
-      Elementary
+  <div class="navbar-brand">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    Elementary
+  </div>
+</nav>
+<mat-sidenav-container style="height: 90%;width: 100%;overflow: hidden" class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+  <mat-sidenav [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: hidden" #snav [mode]="mobileQuery.matches ? 'over' : 'over'" [fixedInViewport]="mobileQuery.matches"
+    fixedTopGap="0">
+
+    <mat-nav-list>
+      <app-leftsidenav></app-leftsidenav>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="height: 100%;width: 100%;overflow-x: hidden">
+      
+    <div>
+      <app-answerarea></app-answerarea>
     </div>
-    </nav>
-    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-        <mat-sidenav style="overflow: hidden"  #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
     
-          <mat-nav-list>
-            <app-leftsidenav></app-leftsidenav>
-          </mat-nav-list>
-        </mat-sidenav>
-    
-        <mat-sidenav-content style="background-color: aqua;height: 100%;width: 100%;overflow: hidden">
-    
-          <div>
-              <app-answerarea></app-answerarea>
-          </div>
-    
-          <div>
-            
-            <app-imageclue></app-imageclue>
-          </div>
-    
-    
-    
-    
-        </mat-sidenav-content>
-        
-      </mat-sidenav-container>
+
+    <div>
+      <app-imageclue></app-imageclue>
+    </div>
+
+
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
 
 
 
