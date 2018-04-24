@@ -51,6 +51,8 @@ import { HistorydialogcompComponent } from './app/historydialogcomp/historydialo
 import { HintBlogComponent } from './app/hint-blog/hint-blog.component';
 import { ProfilenavComponent } from './app/profilenav/profilenav.component';
 
+import{HashLocationStrategy,LocationStrategy} from '@angular/common'
+
 
 
 @NgModule({
@@ -110,7 +112,7 @@ import { ProfilenavComponent } from './app/profilenav/profilenav.component';
     AppRoutingModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [ToasterServiceService],
+  providers: [{provide:LocationStrategy,useClass:HashLocationStrategy},ToasterServiceService],
   entryComponents:[HistorydialogcompComponent],
   bootstrap: [AppComponent]
 })
