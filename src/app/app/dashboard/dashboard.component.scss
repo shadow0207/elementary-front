@@ -32,3 +32,24 @@ h1.example-app-name {
 // ################################################
 
 //################################################
+.example-header-image {
+  background-image: url('/assets/user_default.jpg');
+  background-size: cover;
+}
+
+      
+.count{
+  
+  position:relative;
+  
+  top: -12px;
+  
+  left:-17px;
+  
+  color: white;
+  
+  font-size: 12px;
+  
+  background: red;
+  
+  }

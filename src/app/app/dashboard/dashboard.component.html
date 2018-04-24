@@ -1,53 +1,88 @@
-<!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
-  <mat-toolbar style="position: relative" color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1 class="example-app-name">Elementary</h1>
-    <div style="position: absolute; right: 0">
-      <mat-icon>exit_to_app</mat-icon>
-    </div>
-  </mat-toolbar>
 
-  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav style="overflow: hidden"  #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-
-      <mat-nav-list>
-        <app-leftsidenav></app-leftsidenav>
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content style="background-color: aqua;height: 100%;width: 100%;overflow: hidden">
-
-      <div>
-          <app-answerarea></app-answerarea>
-      </div>
-
-      <div>
-        
-        <app-imageclue></app-imageclue>
-      </div>
-
-
-
-
-    </mat-sidenav-content>
-    
-  </mat-sidenav-container>
-  
-</div> -->
-<!-- Image and text -->
-<nav class="navbar navbar-dark primary-color sticky-top">
+<nav class="navbar navbar-dark primary-color sticky-top navbar-expand-md">
   <div class="navbar-brand">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
+
     </button>
+
     Elementary
   </div>
+  <!-- Toggler -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <form class=" form-inline my-2 my-lg-0 ml-auto">
+      <input style="width: 45%" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      
+      <button mat-icon-button>
+        <mat-icon style="color: aliceblue">search</mat-icon>
+
+      </button>
+      <button mat-icon-button (click)="generateNoti()">
+        <mat-icon style="color: aliceblue">notifications</mat-icon>
+        <span  *ngIf="notiCount>0"class="badge count rounded-circle">{{notiCount}}</span>
+      </button>
+      <button mat-icon-button (click)="bloghint.toggle()">
+          <mat-icon style="color: aliceblue">lightbulb_outline</mat-icon>
+  
+        </button>
+      <button mat-icon-button  [matMenuTriggerFor]="menu">
+        <div mat-card-avatar class="example-header-image"></div>
+
+      </button>
+
+
+
+    </form>
+  </div>
 </nav>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+     
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voicemail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+<!-- CONTAINER -->
 <mat-sidenav-container style="height: 90%;width: 100%;overflow: hidden" class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
-  <mat-sidenav [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: hidden" #snav [mode]="mobileQuery.matches ? 'over' : 'over'" [fixedInViewport]="mobileQuery.matches"
-    fixedTopGap="0">
+  <!-- RIGHT NAV, NOTIFICATIONS -->
+  <!-- <mat-sidenav position="end"  [style.paddingTop.%]="mobileQuery.matches ? 12 : 0" [style.marginTop.%]="mobileQuery.matches ? 16 : 0" [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: auto" #notification [mode]="mobileQuery.matches ? 'over' : 'over'"
+  [fixedInViewport]="mobileQuery.matches" fixedTopGap="0">
+
+  <mat-nav-list>
+    <app-hint-blog></app-hint-blog>
+  </mat-nav-list>
+</mat-sidenav> -->
+  <!-- RIGHT NAV CONTAINER, PROFILE UPDATE -->
+  <!-- <mat-sidenav position="end"  [style.paddingTop.%]="mobileQuery.matches ? 12 : 0" [style.marginTop.%]="mobileQuery.matches ? 16 : 0" [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: auto" #profile [mode]="mobileQuery.matches ? 'over' : 'over'"
+  [fixedInViewport]="mobileQuery.matches" fixedTopGap="0">
+
+  <mat-nav-list>
+    <app-profilenav></app-profilenav>
+  </mat-nav-list>
+</mat-sidenav> -->
+  <!-- RIGHT NAV CONTAINER, HINT BLOG-->
+  
+    <mat-sidenav position="end"  [style.paddingTop.%]="mobileQuery.matches ? 12 : 0" [style.marginTop.%]="mobileQuery.matches ? 16 : 0" [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: auto" #bloghint [mode]="mobileQuery.matches ? 'over' : 'over'"
+    [fixedInViewport]="mobileQuery.matches" fixedTopGap="0">
+
+    <mat-nav-list>
+      <app-hint-blog></app-hint-blog>
+    </mat-nav-list>
+  </mat-sidenav>
+<!-- LEFT NAV COTAINER -->
+  <mat-sidenav [style.marginTop.%]="mobileQuery.matches ? 16 : 0" [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: hidden" #snav [mode]="mobileQuery.matches ? 'over' : 'over'"
+    [fixedInViewport]="mobileQuery.matches" fixedTopGap="0">
 
     <mat-nav-list>
       <app-leftsidenav></app-leftsidenav>
@@ -55,13 +90,14 @@
   </mat-sidenav>
 
   <mat-sidenav-content style="height: 100%;width: 100%;overflow-x: hidden">
-      
+    <!-- Basic dropdown -->
+
     <div>
       <app-answerarea></app-answerarea>
     </div>
-    
 
-    <div>
+
+    <div >
       <app-imageclue></app-imageclue>
     </div>
 
@@ -74,6 +110,3 @@
 
 
 
-<!-- Copyright 2018 Google Inc. All Rights Reserved.
-      Use of this source code is governed by an MIT-style license that
-      can be found in the LICENSE file at http://angular.io/license -->

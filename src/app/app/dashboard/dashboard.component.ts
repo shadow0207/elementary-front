@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef} from '@angular/core';
+import{ToasterServiceService} from '../toaster-service.service';
 import * as $ from 'jquery';
 @Component({
   selector: 'app-dashboard',
@@ -13,11 +14,12 @@ export class DashboardComponent {
  
   
     private _mobileQueryListener: () => void;
-  
-    constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+     notiCount:Number
+    constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private toastr:ToasterServiceService) {
       this.mobileQuery = media.matchMedia('(max-width: 600px)');
       this._mobileQueryListener = () => changeDetectorRef.detectChanges();
       this.mobileQuery.addListener(this._mobileQueryListener);
+      this.notiCount=Math.floor(Math.random() * 10) + 1 
     }
   
     ngOnDestroy(): void {
@@ -25,7 +27,15 @@ export class DashboardComponent {
     }
   
     shouldRun:boolean=true;
-    
+    generateNoti()
+    {
+      for(let i=0;i<this.notiCount;i++)
+      {
+        this.toastr.info("Notification ");
+      }
+        
+        this.notiCount=0;
+    }
   }
   
 

@@ -48,6 +48,9 @@ import { LeftsidenavComponent } from './app/leftsidenav/leftsidenav.component';
 import { SearchareaComponent } from './app/searcharea/searcharea.component';
 import { AnswerareaComponent } from './app/answerarea/answerarea.component';
 import { HistorydialogcompComponent } from './app/historydialogcomp/historydialogcomp.component';
+import { HintBlogComponent } from './app/hint-blog/hint-blog.component';
+import { ProfilenavComponent } from './app/profilenav/profilenav.component';
+
 
 
 @NgModule({
@@ -60,6 +63,9 @@ import { HistorydialogcompComponent } from './app/historydialogcomp/historydialo
     SearchareaComponent,
     AnswerareaComponent,
     HistorydialogcompComponent,
+    HintBlogComponent,
+    ProfilenavComponent,
+    
     
   ],
   imports: [ CdkTableModule,

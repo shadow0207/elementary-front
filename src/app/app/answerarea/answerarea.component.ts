@@ -16,8 +16,8 @@ export class AnswerareaComponent implements OnInit {
 
   onHistory() {
     let dialogRef = this.dialog.open(HistorydialogcompComponent, {
-      width: '500px',
-      height:'250px',
+      minWidth: '300px',
+      height:'500px',
       data: {  }
     });
 
