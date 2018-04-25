@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef} from '@angular/core';
+import {MatSnackBar} from '@angular/material';
 @Component({
   selector: 'app-imageclue',
   templateUrl: './imageclue.component.html',
@@ -9,7 +10,7 @@ import {ChangeDetectorRef} from '@angular/core';
 export class ImageclueComponent implements OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,public snackBar: MatSnackBar) {
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -19,5 +20,13 @@ export class ImageclueComponent implements OnInit {
   ngOnInit() {
     
   }
-
+  seeFileName()
+  {
+    this.openSnackBar("Clue","Zoo");
+  }
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 5000,
+    });
+  }
 }
