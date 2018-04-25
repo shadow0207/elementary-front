@@ -9,6 +9,7 @@ import { DashboardComponent } from './app/dashboard/dashboard.component';
 import { ImageclueComponent } from './app/imageclue/imageclue.component';
 import {CdkTableModule} from '@angular/cdk/table';
 import{ToasterServiceService} from './app/toaster-service.service';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   MatAutocompleteModule,
@@ -115,7 +116,9 @@ import { AnalyticsComponent } from './app/analytics/analytics.component'
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [{provide:LocationStrategy,useClass:HashLocationStrategy},ToasterServiceService],
