@@ -51,7 +51,8 @@ import { HistorydialogcompComponent } from './app/historydialogcomp/historydialo
 import { HintBlogComponent } from './app/hint-blog/hint-blog.component';
 import { ProfilenavComponent } from './app/profilenav/profilenav.component';
 
-import{HashLocationStrategy,LocationStrategy} from '@angular/common'
+import{HashLocationStrategy,LocationStrategy} from '@angular/common';
+import { PostquerydialogComponent } from './app/postquerydialog/postquerydialog.component'
 
 
 
@@ -67,6 +68,7 @@ import{HashLocationStrategy,LocationStrategy} from '@angular/common'
     HistorydialogcompComponent,
     HintBlogComponent,
     ProfilenavComponent,
+    PostquerydialogComponent,
     
     
   ],
@@ -113,7 +115,7 @@ import{HashLocationStrategy,LocationStrategy} from '@angular/common'
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [{provide:LocationStrategy,useClass:HashLocationStrategy},ToasterServiceService],
-  entryComponents:[HistorydialogcompComponent],
+  entryComponents:[HistorydialogcompComponent,PostquerydialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

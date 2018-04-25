@@ -1,5 +1,6 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import{PostquerydialogComponent} from '../postquerydialog/postquerydialog.component'
 import {HistorydialogcompComponent} from '../historydialogcomp/historydialogcomp.component';
 import{ToasterServiceService} from '../toaster-service.service';
 @Component({
