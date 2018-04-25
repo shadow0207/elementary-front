@@ -8,7 +8,8 @@
 
             <div class="col-md-2" style="text-align: center">
                 <!-- Left side image -->
-                <i class="material-icons">search</i>
+                <i class="material-icons" matTooltip="Copy image path" (click)="copyToClipboard('http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg')">content_copy</i>
+                <i class="material-icons"(click)="searchByImage()">search</i>
                 <i class="material-icons">favorite</i>
                 <i class="material-icons" matTooltip="Filename, A clue!" (click)="seeFileName()">insert_drive_file</i>
             </div>

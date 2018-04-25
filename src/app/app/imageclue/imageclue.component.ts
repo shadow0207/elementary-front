@@ -29,4 +29,20 @@ export class ImageclueComponent implements OnInit {
       duration: 5000,
     });
   }
+  searchByImage()
+  {
+    
+    window.open('https://images.google.com/');
+  }
+  copyToClipboard(text:string){
+    
+    var event = (e: ClipboardEvent) => {
+      e.clipboardData.setData('text/plain', text);
+      e.preventDefault();
+      document.removeEventListener('copy', event);
+  }
+  document.addEventListener('copy', event);
+  document.execCommand('copy');
+  this.openSnackBar("Copied","Clipboard")
+  }
 }

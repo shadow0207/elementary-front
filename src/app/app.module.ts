@@ -56,7 +56,7 @@ import{HashLocationStrategy,LocationStrategy} from '@angular/common';
 import { PostquerydialogComponent } from './app/postquerydialog/postquerydialog.component';
 import { LeaderboardComponent } from './app/leaderboard/leaderboard.component';
 import { AnalyticsComponent } from './app/analytics/analytics.component'
-
+import { ClipboardModule } from 'ngx-clipboard';
 
 
 @NgModule({
@@ -118,7 +118,8 @@ import { AnalyticsComponent } from './app/analytics/analytics.component'
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ClipboardModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [{provide:LocationStrategy,useClass:HashLocationStrategy},ToasterServiceService],

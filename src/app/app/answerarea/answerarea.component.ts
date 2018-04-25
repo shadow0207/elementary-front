@@ -45,4 +45,8 @@ export class AnswerareaComponent implements OnInit {
         window.open('http://www.google.com/search?q='+this.query);
     }
   }
+  onSubmit(){
+
+    alert("Asd")
+  }
 }
