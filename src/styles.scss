@@ -3,9 +3,10 @@
 html, body
 {
     height: 100%;
+    overflow: hidden;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 /* Track */
@@ -15,10 +16,10 @@ html, body
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: rgb(255, 255, 255); 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: rgb(248, 248, 248); 
 }

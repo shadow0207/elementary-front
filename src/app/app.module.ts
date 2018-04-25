@@ -52,7 +52,9 @@ import { HintBlogComponent } from './app/hint-blog/hint-blog.component';
 import { ProfilenavComponent } from './app/profilenav/profilenav.component';
 
 import{HashLocationStrategy,LocationStrategy} from '@angular/common';
-import { PostquerydialogComponent } from './app/postquerydialog/postquerydialog.component'
+import { PostquerydialogComponent } from './app/postquerydialog/postquerydialog.component';
+import { LeaderboardComponent } from './app/leaderboard/leaderboard.component';
+import { AnalyticsComponent } from './app/analytics/analytics.component'
 
 
 
@@ -69,6 +71,8 @@ import { PostquerydialogComponent } from './app/postquerydialog/postquerydialog.
     HintBlogComponent,
     ProfilenavComponent,
     PostquerydialogComponent,
+    LeaderboardComponent,
+    AnalyticsComponent,
     
     
   ],
