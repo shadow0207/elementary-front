@@ -1,4 +1,4 @@
-<div class="row" style="margin-top: 5px">
+<div class="row" style="margin-top: 1px">
     <div class="col-md-2">
 
     </div>
@@ -6,17 +6,19 @@
         <div class="row">
 
 
-            <div class="col-md-2" style="text-align: center">
+            <div class="col-md-2 " style="text-align: center">
                 <!-- Left side image -->
+                <mat-card>
                 <i class="material-icons" matTooltip="Copy image path" (click)="copyToClipboard('http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg')">content_copy</i>
                 <i class="material-icons"(click)="searchByImage()">search</i>
                 <i class="material-icons">favorite</i>
                 <i class="material-icons" matTooltip="Filename, A clue!" (click)="seeFileName()">insert_drive_file</i>
+            </mat-card>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 jumbotron" [style.marginTop.px]="mobileQuery.matches ? 2 : 0">
 
                 <div class="image-container" [style.height.px]="mobileQuery.matches ? 300 : 450" [style.width.%]="mobileQuery.matches ? 100 : 100">
-                    <img style="padding: 2px; width: 100%;height: 100%" src="/assets/Elementary.png">
+                    <img style="padding: 2px; width: 100%;height: 100%" src="/assets/zoo.jpg">
 
                 </div>
 
@@ -29,7 +31,7 @@
 
     </div>
     <div class="col-md-2">
-        image right
+        
 
     </div>
 </div>
