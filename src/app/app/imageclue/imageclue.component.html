@@ -6,24 +6,53 @@
         <div class="row">
 
 
-            <div class="col-md-2 " style="text-align: center">
+            <div class="col-md-3 " style="text-align: center">
                 <!-- Left side image -->
-                <mat-card>
-                <i class="material-icons" matTooltip="Copy image path" (click)="copyToClipboard('http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg')">content_copy</i>
-                <i class="material-icons"(click)="searchByImage()">search</i>
-                <i class="material-icons">favorite</i>
-                <i class="material-icons" matTooltip="Filename, A clue!" (click)="seeFileName()">insert_drive_file</i>
-            </mat-card>
+                <mat-card >
+                    <button mat-icon-button matTooltip="Copy image path" (click)="copyToClipboard('http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg')">
+                        <mat-icon>content_copy</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Image search" (click)="searchByImage()">
+                        <mat-icon>search</mat-icon>
+                    </button>
+                    <button *ngIf="mobileQuery.matches"  mat-icon-button matTooltip="helpline">
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+
+                    <button *ngIf="mobileQuery.matches" mat-icon-button matTooltip="Filename, A clue!" (click)="seeFileName()">
+                        <mat-icon>insert_drive_file</mat-icon>
+                    </button>
+                    <!-- <i class="material-icons" matTooltip="Copy image path" (click)="copyToClipboard('http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg')">content_copy</i>
+                    <i class="material-icons" (click)="searchByImage()">search</i>
+                    <i class="material-icons">favorite</i> -->
+                    <!-- <i class="material-icons" matTooltip="Filename, A clue!" (click)="seeFileName()">insert_drive_file</i> -->
+                </mat-card>
             </div>
-            <div class="col-md-8 jumbotron" [style.marginTop.px]="mobileQuery.matches ? 2 : 0">
+            <div class="col-md-6 jumbotron fill"  [style.height.px]="mobileQuery.matches ? 300 : 400"  [style.marginTop.px]="mobileQuery.matches ? 2 : 0">
 
-                <div class="image-container" [style.height.px]="mobileQuery.matches ? 300 : 450" [style.width.%]="mobileQuery.matches ? 100 : 100">
-                    <img style="padding: 2px; width: 100%;height: 100%" src="/assets/zoo.jpg">
+                <!-- <div class="image-container" [style.height.px]="mobileQuery.matches ? 300 : 400" [style.width.%]="mobileQuery.matches ? 100 : 80" [style.marginLeft.%]="mobileQuery.matches ? 0 :15" >
+                    <img style="padding: 0%; width: 90%;height: 105%" src="/assets/clue.jpg">
 
-                </div>
+                </div> -->
+               
+                        <img class="fit_image" src="/assets/clue.jpg">
+                    
+                        
 
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-3" style="text-align: center">
+                <!-- RIGHT SIDE IMAGE -->
+                <mat-card  *ngIf="!mobileQuery.matches">
+                    <button mat-icon-button matTooltip="helpline">
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+
+                    <button mat-icon-button matTooltip="Filename, A clue!" (click)="seeFileName()">
+                        <mat-icon>insert_drive_file</mat-icon>
+                    </button>
+                </mat-card>
+
+            </div>
 
 
         </div>
@@ -31,7 +60,7 @@
 
     </div>
     <div class="col-md-2">
-        
+
 
     </div>
 </div>

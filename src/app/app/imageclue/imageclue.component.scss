@@ -51,4 +51,14 @@
       transform:skew(8deg) rotate(3deg);
   } 
  
- 
+  .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%
+}

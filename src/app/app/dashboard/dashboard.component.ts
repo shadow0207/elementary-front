@@ -17,7 +17,7 @@ export class DashboardComponent {
     private _mobileQueryListener: () => void;
      notiCount:Number
     constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private toastr:ToasterServiceService) {
-      this.mobileQuery = media.matchMedia('(max-width: 600px)');
+      this.mobileQuery = media.matchMedia('(max-width: 800px)');
       this._mobileQueryListener = () => changeDetectorRef.detectChanges();
       this.mobileQuery.addListener(this._mobileQueryListener);
       this.notiCount=Math.floor(Math.random() * 10) + 1 

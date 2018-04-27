@@ -12,7 +12,7 @@ export class ImageclueComponent implements OnInit {
   private _mobileQueryListener: () => void;
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,public snackBar: MatSnackBar) {
 
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia('(max-width: 800px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
    }
@@ -32,7 +32,7 @@ export class ImageclueComponent implements OnInit {
   searchByImage()
   {
     
-    window.open('https://images.google.com/');
+    window.open('http://images.google.com/searchbyimage?image_url='+'http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg');
   }
   copyToClipboard(text:string){
     
