@@ -15,6 +15,7 @@ export class ImageclueComponent implements OnInit {
     this.mobileQuery = media.matchMedia('(max-width: 800px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    
    }
 
   ngOnInit() {
