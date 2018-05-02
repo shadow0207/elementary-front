@@ -57,7 +57,7 @@ import { PostquerydialogComponent } from './app/postquerydialog/postquerydialog.
 import { LeaderboardComponent } from './app/leaderboard/leaderboard.component';
 import { AnalyticsComponent } from './app/analytics/analytics.component'
 import { ClipboardModule } from 'ngx-clipboard';
-
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
@@ -119,7 +119,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ClipboardModule
+    ClipboardModule,
+    ParticlesModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [{provide:LocationStrategy,useClass:HashLocationStrategy},ToasterServiceService],

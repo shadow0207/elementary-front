@@ -6,7 +6,7 @@
         <div class="row">
 
 
-            <div class="col-md-3 " style="text-align: center">
+            <div class="col-md-3 " style="text-align: center;padding: 0">
                 <!-- Left side image -->
                 <mat-card class="animated flipInY">
                     <button class="animated rubberBand" mat-icon-button matTooltip="Copy image path" (click)="copyToClipboard('http://printablecoloringpagesforkids.us/wp-content/uploads/2017/12/zoo-animal-coloring-sheets-www-bloomscenter-within-animal-pictures-coloring-pages.jpg')">
@@ -28,19 +28,19 @@
                     <!-- <i class="material-icons" matTooltip="Filename, A clue!" (click)="seeFileName()">insert_drive_file</i> -->
                 </mat-card>
             </div>
-            <div class="col-md-6 fill animated flipInY"  [style.height.px]="mobileQuery.matches ? 300 : 400"  [style.marginTop.px]="mobileQuery.matches ? 2 : 0">
+            <div class="col-md-6 fill animated flipInY " style="padding: 0" [style.height.px]="mobileQuery.matches ? 300 : 400"  [style.marginTop.px]="mobileQuery.matches ? 2 : 0">
 
                 <!-- <div class="image-container" [style.height.px]="mobileQuery.matches ? 300 : 400" [style.width.%]="mobileQuery.matches ? 100 : 80" [style.marginLeft.%]="mobileQuery.matches ? 0 :15" >
                     <img style="padding: 0%; width: 90%;height: 105%" src="/assets/clue.jpg">
 
                 </div> -->
                
-                        <img class="fit_image" src="/assets/clue.jpg">
+                        <img  src="/assets/clue.jpg">
                     
                         
 
             </div>
-            <div class="col-md-3" style="text-align: center">
+            <div class="col-md-3" style="text-align: center;padding: 0">
                 <!-- RIGHT SIDE IMAGE -->
                 <mat-card class="animated flipInY"  *ngIf="!mobileQuery.matches">
                     <button class="animated rubberBand" mat-icon-button matTooltip="helpline">

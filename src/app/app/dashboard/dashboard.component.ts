@@ -12,7 +12,8 @@ import * as $ from 'jquery';
 export class DashboardComponent {
   mobileQuery: MediaQueryList;
   
- 
+ blogFlag:boolean=false;
+  clickCount:number=1;
   
     private _mobileQueryListener: () => void;
      notiCount:Number
@@ -36,6 +37,18 @@ export class DashboardComponent {
       }
         
         this.notiCount=0;
+    }
+    check()
+    {
+      this.clickCount++;
+      if(this.clickCount%2==0)
+      {
+        this.blogFlag=true;
+      
+      }else{
+        this.blogFlag=false;
+      }
+      alert(this.blogFlag)
     }
   }
   

@@ -25,7 +25,7 @@
         <mat-icon style="color: aliceblue">notifications</mat-icon>
         <span  *ngIf="notiCount>0"class="badge count rounded-circle">{{notiCount}}</span>
       </button>
-      <button class="animated zoomIn" mat-icon-button (click)="bloghint.toggle()">
+      <button class="animated zoomIn" mat-icon-button (click)="bloghint.toggle()" (click)="check()">
           <mat-icon style="color: aliceblue">lightbulb_outline</mat-icon>
   
         </button>
@@ -60,7 +60,7 @@
 <!-- CONTAINER -->
 <mat-sidenav-container style="height: 90%;width: 100%;overflow: hidden" class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
 
-  
+  <!-- RIGHT CONTAINER -->
     <mat-sidenav position="end"  [style.paddingTop.%]="mobileQuery.matches ? 12 : 0" [style.marginTop.%]="mobileQuery.matches ? 16 : 0" [style.width.%]="mobileQuery.matches ? 66 : 40" style="overflow: auto" #bloghint [mode]="mobileQuery.matches ? 'over' : 'over'"
     [fixedInViewport]="mobileQuery.matches" fixedTopGap="0">
 
